@@ -1,0 +1,31 @@
+
+/*Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+
+For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.*/
+
+
+
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        
+        int arr[]={10,15,3,7};
+        int k=17;
+        boolean flag=false;
+        Set<Integer> s=new HashSet<>();
+
+        for(int i=0;i<arr.length;i++)
+        {
+            if(s.contains(k-arr[i])){
+            flag=true;
+            break;}
+            else
+            s.add(arr[i]);
+            
+
+        }
+        System.out.println(flag);
+    }}                                          
+    // TIME COMPLEXITY: O(n)
+    // SPACE COMPLEXITY: O(n)
+        
